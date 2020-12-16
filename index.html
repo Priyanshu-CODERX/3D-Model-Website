@@ -1,23 +1,37 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>3D Model</title>
-	<link rel="stylesheet" type="text/css" href="style.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>3D Model</title>
+    <link rel="stylesheet" type="text/css" href="style.css" />
+  </head>
+  <body>
+    <script
+      type="module"
+      src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/@google/model-viewer/dist/model-viewer-legacy.js"
+    ></script>
 
-</head>
-<body>
-	<script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
-	<script nomodule src="https://unpkg.com/@google/model-viewer/dist/model-viewer-legacy.js"></script>
+    <div class="container">
+      <model-viewer
+        class="model"
+        src="/ps5.glb"
+        alt="A 3D model of an Horse"
+        auto-rotate
+        shadow-intensity="1"
+		camera-controls
+		skybox-image="/skybox.hdr"
+		ar-scale="auto"
+		ios-src="/ps5.glb"
+      >
+	  </model-viewer>
+	  
+    </div>
 
-	<model-viewer class="model"
-	  src="https://modelviewer.dev/shared-assets/models/Horse.glb"
-	  alt="A 3D model of an astronaut"
-	  auto-rotate
-	  shadow-intensity="1"
-	  camera-controls>
-	</model-viewer>
-		
-</body>
+    <script src="https://unpkg.com/focus-visible@5.1.0/dist/focus-visible.js"></script>
+  </body>
 </html>
